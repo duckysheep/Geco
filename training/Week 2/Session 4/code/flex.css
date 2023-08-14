@@ -1,0 +1,70 @@
+.flex-container {
+  height: 750px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  align-content: space-evenly;
+}
+
+.flex-container div {
+  border: 1px solid black;
+  height: 350px;
+  width: 25%;
+  background-color: orange;
+  color: white;
+}
+
+.flex-container img {
+  width: 100%;
+  height: 60%;
+  object-fit: contain;
+}
+
+#style-text {
+  color: coral;
+  text-align: center;
+  text-decoration: underline wavy green;
+  letter-spacing: 2px;
+  word-spacing: 10px;
+  line-height: 2;
+  text-transform: lowercase;
+}
+
+/* nav items ->14px to 16px
+heading-> 30px to 40px 
+text under images-> 12 px to 14 px
+*/
+#font {
+  font-size: 16px;
+  font-weight: bold;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+#style-overflow {
+  width: 100px;
+  height: 100px;
+  border: 1px solid black;
+  background-color: antiquewhite;
+  overflow: auto;
+}
+
+/* .task {
+  height: 400px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  align-content: space-evenly;
+  text-align: center;
+}
+
+.task div {
+  border: 1px solid black;
+  height: 200px;
+  width: 20%;
+}
+
+.task h1 {
+  width: 100%;
+} */
