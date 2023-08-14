@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Document</title>
+
+    <style>
+      td,
+      th {
+        border: 1px solid black;
+      }
+    </style>
+  </head>
+
+  <body>
+    <header></header>
+
+    <main>
+      <section>
+        <h2>Audio</h2>
+        <audio controls autoplay muted>
+          <source src="" type="audio/mp3" />
+          <!-- backup if first provided cannot run -->
+          <source src="" type="audio/ogg" />
+
+          <!-- fallback content is displayed if audio tag is not supported by browser-->
+          This tag is not supported.
+        </audio>
+      </section>
+
+      <section>
+        <h2>Video</h2>
+        <video controls autoplay muted loop>
+          <source src="" type="video/mp4" />
+          <source src="" type="video/ogg" />
+
+          This tag is not supported
+        </video>
+      </section>
+
+      <section>
+        <h2>iframes</h2>
+
+        <!-- get embed link from share -->
+        <iframe
+          width="560"
+          height="315"
+          src="https://www.youtube.com/embed/LxywdHJWRs8"
+          title="YouTube video player"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowfullscreen
+        ></iframe>
+      </section>
+
+      <section>
+        <h2>table</h2>
+        <table style="border: 1px solid black; border-collapse: collapse">
+          <!-- to group columns and style -->
+          <!-- span refers to the number of columns counting from the left, not the column number -->
+          <colgroup>
+            <col span="1" style="background-color: aquamarine" />
+            <col span="2" style="background-color: lightgreen" />
+            <col span="1" style="background-color: lightseagreen" />
+          </colgroup>
+
+          <thead>
+            <tr style="background-color: white; text-align: left">
+              <th>Name</th>
+              <th>Age</th>
+              <th>Designation</th>
+              <th>Country</th>
+            </tr>
+          </thead>
+
+          <tbody>
+            <tr>
+              <td>Alina</td>
+              <td>20</td>
+              <td>Softwar Developer</td>
+              <td>Canada</td>
+            </tr>
+            <tr>
+              <td>Alex</td>
+              <td>22</td>
+              <td>Testing</td>
+              <td>India</td>
+            </tr>
+            <tr>
+              <td>Harry</td>
+              <td>20</td>
+              <td>Manager</td>
+              <td>USA</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <table style="border-collapse: collapse">
+          <caption>
+            Food Menu
+          </caption>
+          <thead>
+            <tr>
+              <td>Serial No.</td>
+              <td>Dessert</td>
+              <td>Meal: Veg</td>
+              <td>Meal: Non-Veg</td>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>1</td>
+              <td>Ice-Cream</td>
+              <td colspan="2">Salad</td>
+              <!-- <td>Salad</td> -->
+            </tr>
+            <tr>
+              <td>2</td>
+              <td>Waffles</td>
+              <td>Spring Rolls</td>
+              <td rowspan="2">Fish and Chips</td>
+            </tr>
+            <tr>
+              <td>2</td>
+              <td>Cheesecake</td>
+              <td>Spinach Noodle Soup</td>
+              <!-- <td>Fish and Chips</td> -->
+            </tr>
+          </tbody>
+        </table>
+      </section>
+    </main>
+    <footer></footer>
+  </body>
+</html>

@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+
+    <title>Document</title>
+  </head>
+  <body>
+    <form method="get" target="_blank" action="./submit.html">
+      <label for="username">Enter your username</label>
+      <input
+        type="text"
+        placeholder="Please enter your username"
+        id="username"
+        value=""
+        required
+        autofocus
+        autocomplete="off"
+      />
+
+      <label for="age">Enter your age</label>
+      <input
+        type="number"
+        placeholder="Please enter your age"
+        id="age"
+        value=""
+        disabled
+      />
+
+      <label for="emailAddress">Enter your email</label>
+      <input
+        type="email"
+        placeholder="Please enter your email"
+        id="emailAddress"
+        value=""
+        readonly
+      />
+
+      <label for="password">Enter your password</label>
+      <input
+        type="password"
+        placeholder="Please enter your password"
+        id="password"
+        value=""
+      />
+
+      <label for="contact">Enter your contact</label>
+      <input
+        type="tel"
+        placeholder="Please enter your contact"
+        id="contact"
+        value=""
+      />
+
+      <!-- radio input inputs with the same name="" attribute will only allow one selection -->
+      <input type="radio" value="male" name="gender" />
+      <label for="male">Male</label>
+      <input type="radio" value="female" name="gender" />
+      <label for="female">Female</label>
+
+      <label for="birth">Birthday</label>
+      <input type="date" id="birth" />
+
+      <label for="time">Select Time</label>
+      <input type="time" id="time" />
+
+      <label for="files">Choose File</label>
+      <input type="file" id="files" />
+
+      <label for="experience">Indicate your experience</label>
+      <input type="range" id="experience" max="10" min="0" />
+
+      <input type="checkbox" name="term" id="term" />
+      <label>I agree to the <a href="#">terms and conditions</a>.</label>
+
+      <label for="country">Select country</label>
+      <select id="country">
+        <option value="australia">Australia</option>
+        <option value="canada">Canada</option>
+        <option value="usa">USA</option>
+        <option value="singapore">Singapore</option>
+      </select>
+
+      <textarea
+        placeholder="Leave your feedback here"
+        rows="5"
+        cols="40"
+      ></textarea>
+
+      <button type="button">Button</button>
+      <input type="reset" />
+      <input type="submit" value="Submit" />
+    </form>
+
+    <form>
+      <fieldset>
+        <legend>Contact Info</legend>
+        <label for="emailAddress">Enter your email</label>
+        <input
+          type="email"
+          placeholder="Please enter your email"
+          id="emailAddress"
+          value=""
+          readonly
+        />
+
+        <label for="password">Enter your password</label>
+        <input
+          type="password"
+          placeholder="Please enter your password"
+          id="password"
+          value=""
+        />
+      </fieldset>
+
+      <fieldset>
+        <legend>Academic Details</legend>
+        <label for="university">Enter your university</label>
+        <input
+          type="text"
+          placeholder="Please enter your university"
+          id="university"
+          value=""
+          autocomplete="off"
+        />
+      </fieldset>
+    </form>
+  </body>
+</html>
