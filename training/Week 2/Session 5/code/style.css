@@ -1,0 +1,40 @@
+#container {
+  background-color: yellow;
+}
+
+#para {
+  font-size: 14px;
+}
+
+@media screen and (max-width: 400px) {
+  #container {
+    background-color: orange;
+  }
+  #para {
+    font-size: 20px;
+  }
+}
+
+@media screen and (min-width: 600px) {
+  #container {
+    background-color: blue;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  #container {
+    background-color: aqua;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  #container {
+    background-color: brown;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  #container {
+    background-color: pink;
+  }
+}
