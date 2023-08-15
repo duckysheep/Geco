@@ -16,8 +16,10 @@
 
 .listing-box {
   /* border: 1px solid black; */
-  max-width: 200px;
-  max-height: 400px;
+  /* max-width: 200px; */
+  width: 15%;
+  /* max-height: 400px; */
+  height: 600px;
 }
 
 .image-box {
@@ -179,4 +181,28 @@ p:hover {
   background-image: url("https://m.media-amazon.com/images/S/sash/NzPf$fHil8CgZmI.png");
   /* object-fit: contain; */
   background-position: -179px -145px;
+}
+
+/* applies when screeen 900px or less */
+@media screen and (max-width: 900px) {
+  .flex-box > .listing-box {
+    width: 30%;
+    flex-flow: row wrap;
+  }
+}
+
+/* applies when screen 600px or less */
+/* @media screen and (max-width: 600px) {
+  .flex-box > .listing-box {
+    width: 100%;
+    flex-flow: row wrap;
+  }
+} */
+
+/* applies when screen 450px or less */
+@media screen and (max-width: 450px) {
+  .flex-box > .listing-box {
+    width: 100%;
+    flex-flow: row wrap;
+  }
 }
