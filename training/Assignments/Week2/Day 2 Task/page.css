@@ -1,0 +1,35 @@
+/* colorhunt palette
+color1 {
+  background-color: #35155d;
+}
+color2 {
+  background-color: #512b81;
+}
+color3 {
+  background-color: #4477ce;
+}
+color4 {
+  background-color: #8cabff;
+} */
+
+body {
+  background-color: #512b81;
+}
+
+.navbarCustomColor {
+  background-color: #35155d;
+}
+
+.cardCustomColor {
+  background-color: #4477ce;
+}
+
+.navbarColor,
+.customColor {
+  color: white;
+}
+
+footer,
+.buttonCustomColor {
+  background-color: #8cabff;
+}

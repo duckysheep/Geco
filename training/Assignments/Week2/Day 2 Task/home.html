@@ -10,6 +10,7 @@
       integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
       crossorigin="anonymous"
     />
+    <link rel="stylesheet" href="page.css" />
   </head>
   <body>
     <script
@@ -18,9 +19,8 @@
       crossorigin="anonymous"
     ></script>
 
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <nav class="navbar navbar-expand-lg navbar-dark navbarCustomColor">
       <div class="container-fluid">
-        <a class="navbar-brand" href="#">Navbar</a>
         <button
           class="navbar-toggler"
           type="button"
@@ -34,63 +34,36 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-            <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="#">Home</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Link</a>
-            </li>
-            <li class="nav-item dropdown">
-              <a
-                class="nav-link dropdown-toggle"
-                href="#"
-                id="navbarDropdown"
-                role="button"
-                data-bs-toggle="dropdown"
-                aria-expanded="false"
+            <li class="nav-item navbarColor">
+              <a class="nav-link active" aria-current="page" href="home.html"
+                >Home</a
               >
-                Dropdown
-              </a>
-              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <li><a class="dropdown-item" href="#">Action</a></li>
-                <li><a class="dropdown-item" href="#">Another action</a></li>
-                <li><hr class="dropdown-divider" /></li>
-                <li>
-                  <a class="dropdown-item" href="#">Something else here</a>
-                </li>
-              </ul>
             </li>
             <li class="nav-item">
-              <a
-                class="nav-link disabled"
-                href="#"
-                tabindex="-1"
-                aria-disabled="true"
-                >Disabled</a
+              <a class="nav-link active" aria-current="page" href="about.html"
+                >About</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="contact.html"
+                >Contact</a
               >
             </li>
           </ul>
-          <form class="d-flex">
-            <input
-              class="form-control me-2"
-              type="search"
-              placeholder="Search"
-              aria-label="Search"
-            />
-            <button class="btn btn-outline-success" type="submit">
-              Search
-            </button>
-          </form>
         </div>
       </div>
     </nav>
 
     <main>
       <div class="d-flex flex-column justify-content-center align-items-center">
-        <div class="card mt-5 w-75">
+        <div class="card mt-5 w-75 cardCustomColor">
           <div class="row g-0">
             <div class="col-md-4">
-              <img src="..." class="img-fluid rounded-start" alt="..." />
+              <img
+                src="https://i.ebayimg.com/images/g/M2EAAOSwRt9gcKI9/s-l1600.jpg"
+                class="img-fluid rounded-start"
+                alt="img1-html"
+              />
             </div>
             <div class="col-md-8">
               <div class="card-body">
@@ -107,7 +80,7 @@
             </div>
           </div>
         </div>
-        <div class="card w-75">
+        <div class="card w-75 cardCustomColor">
           <div class="row g-0">
             <div class="col-md-8">
               <div class="card-body">
@@ -123,14 +96,20 @@
               </div>
             </div>
             <div class="col-md-4">
-              <img src="..." class="img-fluid rounded-start" alt="..." />
+              <img
+                src="https://m.media-amazon.com/images/I/7185Ip6EDKL._AC_SX679_.jpg"
+                class="img-fluid rounded-start"
+                alt="img2-html"
+              />
             </div>
           </div>
         </div>
 
-        <div class="card-group mt-5 w-75 d-flex">
+        <div class="card-group mt-5 w-75">
           <div class="col-12 col-sm-12 col-md-4">
-            <div class="card justify-content-center align-items-center">
+            <div
+              class="card justify-content-center align-items-center cardCustomColor"
+            >
               <div class="card-body">
                 <iframe
                   width="100%"
@@ -145,7 +124,9 @@
             </div>
           </div>
           <div class="col-12 col-sm-12 col-md-4">
-            <div class="card">
+            <div
+              class="card justify-content-center align-items-center cardCustomColor"
+            >
               <div class="card-body">
                 <iframe
                   width="100%"
@@ -160,7 +141,9 @@
             </div>
           </div>
           <div class="col-12 col-sm-12 col-md-4">
-            <div class="card">
+            <div
+              class="card justify-content-center align-items-center cardCustomColor"
+            >
               <div class="card-body">
                 <iframe
                   width="100%"
@@ -177,5 +160,117 @@
         </div>
       </div>
     </main>
+
+    <footer class="bd-footer py-4 py-md-5 mt-5 bg-body-tertiary">
+      <div class="container py-4 py-md-5 px-4 px-md-3 text-body-secondary">
+        <div class="row">
+          <div class="col-lg-3 mb-3">
+            <div class="col-6 mb-3">
+              <h5>Useful Links</h5>
+              <ul class="list-unstyled">
+                <li class="mb-2">
+                  <a
+                    href="about.html"
+                    class="text-decoration-none link-secondary"
+                    >About</a
+                  >
+                </li>
+                <li class="mb-2">
+                  <a href="#" class="text-decoration-none link-secondary"
+                    >How to</a
+                  >
+                </li>
+                <li class="mb-2">
+                  <a href="#" class="text-decoration-none link-secondary"
+                    >FAQ</a
+                  >
+                </li>
+                <li class="mb-2">
+                  <a
+                    href="contact.html"
+                    class="text-decoration-none link-secondary"
+                    >Contact Us</a
+                  >
+                </li>
+                <li class="mb-2">
+                  <a href="#" class="text-decoration-none link-secondary"
+                    >Log in</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-lg-3 mb-3">
+            <div class="col-6 mb-3">
+              <h5>Customer Service</h5>
+              <ul class="list-unstyled">
+                <li class="mb-2">
+                  <a href="#" class="text-decoration-none link-secondary"
+                    >Payment Methods</a
+                  >
+                </li>
+                <li class="mb-2">
+                  <a href="#" class="text-decoration-none link-secondary"
+                    >Money-back Guarantee</a
+                  >
+                </li>
+                <li class="mb-2">
+                  <a href="#" class="text-decoration-none link-secondary"
+                    >Returns</a
+                  >
+                </li>
+                <li class="mb-2">
+                  <a href="#" class="text-decoration-none link-secondary"
+                    >Shipping</a
+                  >
+                </li>
+                <li class="mb-2">
+                  <a href="#" class="text-decoration-none link-secondary"
+                    >Terms and Conditions</a
+                  >
+                </li>
+                <li class="mb-2">
+                  <a href="#" class="text-decoration-none link-secondary"
+                    >Privacy Policy</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-lg-3 mb-3">
+            <div class="col-6 mb-3">
+              <h5>My Account</h5>
+              <ul class="list-unstyled">
+                <li class="mb-2">
+                  <a href="#" class="text-decoration-none link-secondary"
+                    >Sign in</a
+                  >
+                </li>
+                <li class="mb-2">
+                  <a href="#" class="text-decoration-none link-secondary"
+                    >View Cart</a
+                  >
+                </li>
+                <li class="mb-2">
+                  <a href="#" class="text-decoration-none link-secondary"
+                    >My Wishlist</a
+                  >
+                </li>
+                <li class="mb-2">
+                  <a href="#" class="text-decoration-none link-secondary"
+                    >Track My Order</a
+                  >
+                </li>
+                <li class="mb-2">
+                  <a href="#" class="text-decoration-none link-secondary"
+                    >Help</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
   </body>
 </html>
