@@ -5,24 +5,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
   </head>
+
+  <!-- <body onload="alert('Welcome')"> -->
   <body>
+    <!-- onchange="displayName()" -->
     <form>
       <label>Enter Name</label>
-      <input
-        type="text"
-        placeholder="enter name"
-        id="name"
-        autocomplete="off"
-      />
-      <input
-        type="number"
-        placeholder="enter age"
-        id="age"
-        autocomplete="off"
-      />
-      <button type="submit" onclick="displayName()">Submit</button>
+      <input type="text" placeholder="Please enter name" id="name" value="" />
+      <input type="text" placeholder="Please enter age" id="age" value="" />
+      <button type="button" onclick="displayName()">Submit</button>
     </form>
 
-    <script src="script.js"></script>
+    <ul>
+      <li class="item">HTML</li>
+      <li class="item">CSS</li>
+      <li class="item">JS</li>
+    </ul>
+
+    <button id="get-data">Store</button>
+
+    <script src="./js/script.js"></script>
   </body>
 </html>
+
+<!-- HTML DOM 
+CSS DOM -->
