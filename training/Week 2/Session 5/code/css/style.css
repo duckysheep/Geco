@@ -3,18 +3,22 @@
 }
 
 #para {
-  font-size: 14px;
+  font-size: 20px;
 }
 
+/* mobile design */
+/* 0px till 400px */
 @media screen and (max-width: 400px) {
   #container {
     background-color: orange;
   }
+
   #para {
-    font-size: 20px;
+    font-size: 12px;
   }
 }
 
+/* 600px and above */
 @media screen and (min-width: 600px) {
   #container {
     background-color: blue;

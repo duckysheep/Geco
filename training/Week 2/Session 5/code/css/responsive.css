@@ -1,13 +1,19 @@
+* {
+    box-sizing: border-box;
+}
+
 .flex-container,
 .container {
   display: flex;
+
   flex-direction: row;
+
   justify-content: space-between;
+
   flex-wrap: wrap;
 }
 
-.flex-container > div,
-.container > div {
+.flex-container > div {
   background-color: yellow;
   border: 1px solid black;
   width: 23%;
@@ -17,32 +23,35 @@
 
 .flex-container img,
 .container img {
+  width: 100%;
   max-width: 200px;
-  max-height: 120px;
-  object-fit: contain;
 }
 
 .container > div {
   width: 33%;
+  background-color: yellow;
+  border: 1px solid black;
+  height: 200px;
+  text-align: center;
 }
 
 @media screen and (max-width: 900px) {
   .flex-container > div {
-    width: 45%;
-    flex-flow: row wrap;
+    width: 48%;
   }
 }
 
 @media screen and (max-width: 600px) {
   .container > div {
     width: 100%;
-    flex-flow: row wrap;
   }
 }
 
 @media screen and (max-width: 450px) {
   .flex-container > div {
     width: 100%;
-    flex-flow: row wrap;
   }
 }
+
+/* task 
+make it responsive in prev assignment 6 -> 3 -> 1 */
