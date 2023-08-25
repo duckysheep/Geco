@@ -1,84 +1,60 @@
 import React, { Component } from "react";
+import Display from "./Display";
+import DisplayTwo from "./DisplayTwo";
 
-// class based component
 class App extends Component {
   state = {
     firstName: "alina",
     age: 20,
     designation: "developer",
     city: "pune",
-    arr: [90, 30, 39],
+    arr: [10, 29, 4, 100],
     contact: {
       email: "admin@gmail.com",
     },
-    employeeData: [
-      {
-        name: "",
-        age: 22,
-        id: 3,
-      },
-      {
-        name: "",
-        age: 24,
-        id: 2,
-      },
-      {
-        name: "",
-        age: 25,
-        id: 1,
-      },
+    isMarried: true,
+    emp: [
+      { name: "", id: 1 },
+      { name: "", id: 2 },
+      { name: "", id: 3 },
     ],
+    strOrNum: "hello",
+  };
+
+  sample = () => {
+    console.log("sample");
   };
 
   handleUpdate = () => {
-    // this is referring to App
-    // to update state
     this.setState({
       designation: "manager",
-      age: 30,
     });
   };
 
-  // whenever state updates, re-rendering happens ( render method is called again)
   render() {
+    // const {data} = this.props;
     return (
-      // this is referring to App
-      // JSX
-      <div>
-        <p>
-          My name is {this.state.firstName} age: {this.state.age}, working as a{" "}
-          {this.state.designation}
-        </p>
-        <p>Contact: {this.state.contact.email}</p>
-        <p>
-          {this.state.arr.map((e) => {
-            return <p>{e}</p>;
-          })}
-        </p>
-
-        <button onClick={this.handleUpdate}>Submit</button>
-      </div>
+      <>
+        <Display data={this.state} />
+        <DisplayTwo
+          firstName={this.state.firstName}
+          age={this.state.age}
+          arr={this.state.arr}
+          contact={this.state.contact}
+          isMarried={this.state.isMarried}
+          emp={this.state.emp}
+          sample={this.sample}
+          strOrNum={this.state.strOrNum}
+        />
+        <button onClick={this.handleUpdate}>Update</button>
+      </>
     );
   }
 }
 
 export default App;
 
-// reconcilation process
-// diffing algo
+// Display({data : this.state})
 
-{
-  /* in html 
-<button onclick="handle()"></button>
-
-handle = () => {
-  document.getElementById("display").innerHTML = ""
-}
-*/
-}
-
-// jsx -> plain js
-
-// babel => transpiler + compiler
-
-//run => npm i
+// rcc -> class based
+// rsc -> function based component
