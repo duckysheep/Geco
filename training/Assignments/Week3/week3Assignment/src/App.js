@@ -1,43 +1,40 @@
 import React, { Component } from "react";
 import data from "./data";
-import Card from "react-bootstrap/Card";
-import { useState } from "react";
-import Button from "react-bootstrap/Button";
-import Modal from "react-bootstrap/Modal";
 import Employee from "./Employee";
+import { useState } from "react";
+import Transport from "./Transport";
+import Button from "react-bootstrap/esm/Button";
 
 const App = () => {
-  const [show, setShow] = useState(false);
+  let arr = {
+    grocery: [
+      { item: "apple", category: "food" },
+      { item: "orange", category: "food" },
+      { item: "banana", category: "food" },
+    ],
+  };
 
-  const handleClose = () => setShow(false);
-  const handleShow = () => setShow(true);
+  const [state, setState] = useState(arr.grocery);
+  const [transport, setTransport] = useState(["bicycle", "car"]);
 
   return (
     <>
+      <Button onClick={() => setTransport(["bicycle"])}>Road Closure</Button>
+
+      <Transport transport={transport}></Transport>
       {data.employees.map((info) => {
         return (
-          <div key={info.id}>
-            <Card style={{ width: "18rem" }}>
-              <Card.Img variant="top" src={info.img} />
-              <Card.Body>
-                <Card.Title onMouseEnter={handleShow}>
-                  {info.fullName}
-                </Card.Title>
-                <Card.Text>{info.designation}</Card.Text>
-              </Card.Body>
-            </Card>
-
-            <Modal show={show} onMouseLeave={handleClose}>
-              <Modal.Header>
-                <Modal.Title>
-                  {info.fullName}, {info.age}
-                </Modal.Title>
-              </Modal.Header>
-              <Modal.Body>
-                {info.dob}, {info.salary}, {info.designation}, {info.dept}
-              </Modal.Body>
-            </Modal>
-          </div>
+          <Employee
+            key={info.id}
+            fullName={info.fullName}
+            age={info.age}
+            dob={info.dob}
+            salary={info.salary}
+            designation={info.designation}
+            img={info.img}
+            dept={info.dept}
+            grocery={state}
+          ></Employee>
         );
       })}
     </>
