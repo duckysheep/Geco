@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import Display from "./Display";
-import DisplayTwo from "./DisplayTwo";
+import DisplayTwo from "../DisplayTwo";
 
 class App extends Component {
   state = {
