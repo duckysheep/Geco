@@ -1,5 +1,5 @@
 // import logo from "./logo.svg";
-import "./App.css";
+import "../App.css";
 import { useState } from "react";
 import NavBar from "./Week 4 Day 1/NavBar";
 import ContactForm from "./Week 4 Day 1/ContactForm";
