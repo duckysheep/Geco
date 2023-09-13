@@ -313,37 +313,37 @@ int main()
     // s1 = {20, 10000};
     // printf("%d %0.2f", s1.age, s1.salary);
 
-    FILE *fs, *ft;
-    char ch;
-    fs = fopen("pr1.txt", "r");
+    // FILE *fs, *ft;
+    // char ch;
+    // fs = fopen("pr1.txt", "r");
 
-    if (fs == NULL)
-    {
-        puts("cannot open the source");
-        exit(1);
-    }
+    // if (fs == NULL)
+    // {
+    //     puts("cannot open the source");
+    //     exit(1);
+    // }
 
-    ft = fopen("pr2.txt", "w");
-    if (fs == NULL)
-    {
-        puts("cannot open the target file");
-        exit(2);
-    }
+    // ft = fopen("pr2.txt", "w");
+    // if (fs == NULL)
+    // {
+    //     puts("cannot open the target file");
+    //     exit(2);
+    // }
 
-    while (1)
-    {
-        ch = fgetc(fs);
+    // while (1)
+    // {
+    //     ch = fgetc(fs);
 
-        if (ch == EOF)
-        {
-            break;
-        }
-        else
-        {
-            fputc(ch, ft);
-        }
-    }
-    fclose(fs);
-    fclose(ft);
-    getch();
+    //     if (ch == EOF)
+    //     {
+    //         break;
+    //     }
+    //     else
+    //     {
+    //         fputc(ch, ft);
+    //     }
+    // }
+    // fclose(fs);
+    // fclose(ft);
+    // getch();
 }
