@@ -55,9 +55,9 @@ import QtQuick.Controls.Styles 1.4
                             size:0.96
                             holeSize: 0.7
                             verticalPosition: 0.7
-                            PieSlice { id: slice; label: "Alpha"; value: 19511; color: "#99CA53" }
-                            PieSlice { label: "Epsilon"; value: 11105; color: "#209FDF" }
-                            PieSlice { label: "Psi"; value: 9352; color: "#F6A625" }
+                            PieSlice { id: slice; label: "Active"; value: 19511; color: "#99CA53" }
+                            PieSlice { label: "Error"; value: 11105; color: "red" }
+                            PieSlice { label: "Inactive"; value: 9352; color: "lightgrey" }
                         }
                     }
                 }
