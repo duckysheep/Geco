@@ -1,0 +1,10 @@
+<RCC>
+    <qresource prefix="/">
+        <file>main.qml</file>
+        <file>Home.qml</file>
+        <file>MyDevices.qml</file>
+        <file>Settings.qml</file>
+        <file>Help.qml</file>
+        <file>AddNewDrive.qml</file>
+    </qresource>
+</RCC>

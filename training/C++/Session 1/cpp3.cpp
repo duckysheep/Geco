@@ -664,7 +664,6 @@ int main()
     // s3.insert(3, "James");
     // StudentConstructor s4;
     // s4.insert(4, "Peter");
-    // return 0;
 
     // // copy constructor
     int n;
@@ -674,4 +673,6 @@ int main()
     Copy cpy = obj;
     cout << "factorial: " << obj.calculate() << "\n";
     cout << "factorial: " << cpy.calculate() << "\n";
+
+    return 0;
 }

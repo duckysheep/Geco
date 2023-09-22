@@ -1,0 +1,13 @@
+{
+    "name": "Burak Hamdi",
+    "surname": "TUFAN",
+    "age": 26,
+    "address": {
+        "city": "Istanbul",
+        "country": "TURKEY"
+    },
+    "phone": [
+        "0555555555",
+        "01111111111"
+    ]
+}
