@@ -8,6 +8,8 @@ import QtQuick.Controls.Styles 1.4
     Rectangle {
         anchors.fill: parent
         anchors.leftMargin: 100
+        anchors.rightMargin: 25
+        anchors.bottomMargin: 25
 //        color: "#F0F0F0"
         color: "green"
 
