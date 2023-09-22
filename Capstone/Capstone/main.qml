@@ -2,7 +2,7 @@ import QtQuick 2.12
 import QtQuick.Window 2.12
 import QtQuick.Layouts 1.3
 import QtCharts 2.3
-import QtQuick.Controls 1.4
+import QtQuick.Controls 2.12
 import QtQuick.Controls.Styles 1.4
 
 Window {
@@ -18,16 +18,23 @@ Window {
         id: rowLayout
         anchors.top: parent.top
         anchors.left: parent.left
-//        anchors.leftMargin: 40
-//        anchors.rightMargin: 25
-//        anchors.topMargin: 25
-//        anchors.bottomMargin: 25
+        anchors.leftMargin: 40
+        anchors.rightMargin: 25
+        anchors.topMargin: 25
+        anchors.bottomMargin: 25
 
         Button {
             id: button1
             anchors.top: parent.top
             anchors.left: rowLayout.left
-            text: qsTr("Dashboard")
+//            text: qsTr("Dashboard")
+            contentItem: Text {
+                text: qsTr("Dashboard")
+                //                    font: control.font
+                verticalAlignment: Text.AlignTop
+                horizontalAlignment: Text.AlignLeft
+                anchors.fill: parent
+            }
             // Download the component from a file
             onClicked: loader.source = "Home.qml"
         }
@@ -36,7 +43,14 @@ Window {
             id: button2
             anchors.left: rowLayout.left
             anchors.top: button1.bottom
-            text: qsTr("My Devices")
+//            text: qsTr("My Devices")
+            contentItem: Text {
+                text: qsTr("My Devices")
+                //                    font: control.font
+                verticalAlignment: Text.AlignTop
+                horizontalAlignment: Text.AlignLeft
+                anchors.fill: parent
+            }
             // Loading setSource component through the method of installing the fragment parameters
             onClicked: loader.setSource("MyDevices.qml")
         }
@@ -45,8 +59,14 @@ Window {
             id: button3
             anchors.left: rowLayout.left
             anchors.top: button2.bottom
-
-            text: qsTr("Settings")
+//            text: qsTr("Settings")
+            contentItem: Text {
+                text: qsTr("Settings")
+                //                    font: control.font
+                verticalAlignment: Text.AlignTop
+                horizontalAlignment: Text.AlignLeft
+                anchors.fill: parent
+            }
             // Loading setSource component through the method of installing the fragment parameters
             onClicked: loader.setSource("Settings.qml")
         }
@@ -55,8 +75,14 @@ Window {
             id: button4
             anchors.left: rowLayout.left
             anchors.top: button3.bottom
-
-            text: qsTr("Help")
+//            text: qsTr("Help")
+            contentItem: Text {
+                text: qsTr("Help")
+                //                    font: control.font
+                verticalAlignment: Text.AlignTop
+                horizontalAlignment: Text.AlignLeft
+                anchors.fill: parent
+            }
             // Installing a fragment from the Component
             onClicked: loader.sourceComponent = fragment4
         }
@@ -65,8 +91,14 @@ Window {
             id: button5
             anchors.left: rowLayout.left
             anchors.top: button4.bottom
-
-            text: qsTr("Add New Drive")
+//            text: qsTr("Add New Drive")
+            contentItem: Text {
+                text: qsTr("Add New Drive")
+                //                    font: control.font
+                verticalAlignment: Text.AlignTop
+                horizontalAlignment: Text.AlignLeft
+                anchors.fill: parent
+            }
             // Installing a fragment from the Component
             onClicked: loader.sourceComponent = fragment5
         }
@@ -89,6 +121,8 @@ Window {
             Rectangle {
                 anchors.fill: parent
                 anchors.leftMargin: 100
+                anchors.rightMargin: 25
+                anchors.bottomMargin: 25
                 color: "blue"
 
                 Text {
@@ -112,6 +146,8 @@ Window {
             Rectangle {
                 anchors.fill: parent
                 anchors.leftMargin: 100
+                anchors.rightMargin: 25
+                anchors.bottomMargin: 25
                 color: "black"
 
                 Text {
