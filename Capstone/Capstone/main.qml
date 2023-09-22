@@ -9,6 +9,7 @@ Window {
     visible: true
     width: 1280
     height: 480
+    color: "#F0F0F0"
     title: qsTr("Capstone Dashboard")
     minimumHeight: 240
     minimumWidth: 1280
@@ -17,11 +18,14 @@ Window {
         id: rowLayout
         anchors.top: parent.top
         anchors.left: parent.left
-        anchors.leftMargin: 0
-        anchors.margins: 15
+//        anchors.leftMargin: 40
+//        anchors.rightMargin: 25
+//        anchors.topMargin: 25
+//        anchors.bottomMargin: 25
 
         Button {
             id: button1
+            anchors.top: parent.top
             anchors.left: rowLayout.left
             text: qsTr("Dashboard")
             // Download the component from a file
