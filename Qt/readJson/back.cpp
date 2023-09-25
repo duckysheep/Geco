@@ -1,20 +1,32 @@
-#include <QApplication>
-#include <QQmlApplicationEngine>
+#include "back.h"
 #include <QFile>
 #include <QDebug>
 #include <QJsonDocument>
 #include <QJsonObject>
 #include <QVariantMap>
-#include <QQmlContext>
 
 
-int main(int argc, char *argv[])
+Back::Back(QObject *parent):QObject(parent)
 {
-    QCoreApplication::setAttribute(Qt::AA_EnableHighDpiScaling);
 
-    QApplication app(argc, argv);
+}
 
-    //expose json to qml
+void Back::changeValue(int a)
+{
+    if(a==1){
+        valueChanged("Label");
+    }
+    else if (a==2){
+        valueChanged("value is 2, from c++");
+    }
+    else{
+        valueChanged("!!!!!");
+    }
+}
+
+
+void Back::readData(){
+
     QString file_path="C:/Users/Daphne/Documents/Work/Geco/Geco/Qt/signalSlot/data.json";
     QFile file_obj(file_path);
     if(!file_obj.open(QIODevice::ReadOnly)){
@@ -48,20 +60,15 @@ int main(int argc, char *argv[])
         exit(4);
     }
 
-    QVariantMap variantMap = json_obj.toVariantMap();
-    //
+    QVariantMap json_map = json_obj.toVariantMap();
+    jsonChanged(json_map);
 
-    QQmlApplicationEngine engine;
-    engine.rootContext()->setContextProperty("variantMap", variantMap);
-
-    const QUrl url(QStringLiteral("qrc:/main.qml"));
-    QObject::connect(&engine, &QQmlApplicationEngine::objectCreated,
-                     &app, [url](QObject *obj, const QUrl &objUrl) {
-        if (!obj && url == objUrl)
-            QCoreApplication::exit(-1);
-    }, Qt::QueuedConnection);
-    engine.load(url);
+    qDebug()<< json_map["name"].toString();
+    qDebug()<< json_map["str"].toInt();
+    qDebug()<< json_map["enemy"].toString();
+    qDebug()<<json_map;
 
 
-    return app.exec();
+    valueChanged(json_map["enemy"].toString());
+
 }

@@ -99,8 +99,8 @@ import QtQuick.Controls.Styles 1.4
                             id: mySeries
 //                            axisX: xAxis
                             axisX: BarCategoryAxis { categories: ["0AM", "1AM", "2AM", "3AM", "4AM", "5AM", "6AM", "7AM", "8AM", "9AM", "10AM", "11AM", "12PM", "1PM", "2PM", "3PM", "4PM", "5PM", "6PM", "7PM", "8PM", "9PM", "10PM", "11PM" ]; gridVisible: false}
-                             BarSet { color: "#FF0000"; label: "Errors"; values: [5, 1, 2, 4, 1, 7,5, 1, 2, 4, 1, 7,5, 1, 2, 4, 1, 7,5, 1, 2, 4, 1, 7] }
-                             BarSet { color:"#9FE703"; label: "Active"; values: [2, 2, 3, 4, 5, 6,2, 2, 3, 4, 5, 6,2, 2, 3, 4, 5, 6,2, 2, 3, 4, 5, 6] }
+                             BarSet { color: "#FF0000"; label: "Errors"; values: variantMap.data[0].values }
+                             BarSet { color:"#9FE703"; label: "Active"; values: variantMap.data[1].values }
 
                         }
                     }

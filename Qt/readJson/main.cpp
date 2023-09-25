@@ -1,15 +1,19 @@
-#include <QApplication>
+#include <QGuiApplication>
 #include <QQmlApplicationEngine>
+#include <QApplication>
+#include <QQmlContext>
 #include <QFile>
 #include <QDebug>
 #include <QJsonDocument>
 #include <QJsonObject>
 #include <QVariantMap>
-#include <QQmlContext>
+#include "back.h"
 
 
 int main(int argc, char *argv[])
 {
+    Back *back = new Back;
+
     QCoreApplication::setAttribute(Qt::AA_EnableHighDpiScaling);
 
     QApplication app(argc, argv);
@@ -51,7 +55,9 @@ int main(int argc, char *argv[])
     QVariantMap variantMap = json_obj.toVariantMap();
     //
 
+
     QQmlApplicationEngine engine;
+    engine.rootContext()->setContextProperty("back",back);
     engine.rootContext()->setContextProperty("variantMap", variantMap);
 
     const QUrl url(QStringLiteral("qrc:/main.qml"));

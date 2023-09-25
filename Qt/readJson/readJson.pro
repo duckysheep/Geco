@@ -1,4 +1,4 @@
-QT += quick
+QT += qml quick gui core widgets
 
 CONFIG += c++11
 
@@ -15,7 +15,6 @@ DEFINES += QT_DEPRECATED_WARNINGS
 
 SOURCES += \
         back.cpp \
-        chart.cpp \
         main.cpp
 
 RESOURCES += qml.qrc
@@ -32,8 +31,4 @@ else: unix:!android: target.path = /opt/$${TARGET}/bin
 !isEmpty(target.path): INSTALLS += target
 
 HEADERS += \
-    back.h \
-    chart.h
-
-DISTFILES += \
-    data.json
+    back.h
