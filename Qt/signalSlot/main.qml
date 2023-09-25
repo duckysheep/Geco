@@ -2,6 +2,7 @@ import QtQuick 2.14
 import QtQuick.Window 2.14
 import QtQuick.Controls 2.5
 
+
 Window {
     visible: true
     width: 640
@@ -51,4 +52,6 @@ Window {
             onValueChanged:label.text=s;
         }
     }
+
+
 }

@@ -3,6 +3,7 @@
 #include <QQmlContext>
 #include "back.h"
 
+
 int main(int argc, char *argv[])
 {
     Back *back = new Back;
